@@ -2,8 +2,11 @@ import "../styles/globals.css";
 import { Analytics } from '@vercel/analytics/react';
 import AppContext from "../components/AppContextFolder/AppContext";
 import { useRef, useState } from "react";
+import  {Main}  from "../components/Main/Main";
+import CustomCursor from "../components/MouseCursor/CustomCursor";
 
-function MyApp({ Component, pageProps }) {
+
+function MyApp({ Component, pageProps}) {
   const timerCookie = useRef(null);
   const windowSizeTrackerRef = useRef(null);
   const mousePositionRef = useRef(null);
@@ -30,10 +33,18 @@ function MyApp({ Component, pageProps }) {
     finishedLoading: false,
   });
   return (
+  
     <AppContext.Provider value={{ sharedState, setSharedState }}>
+      
+      <CustomCursor/>
+      <Main/>
       <Component {...pageProps} />
+      
       <Analytics />
+    
     </AppContext.Provider>
+
+    
   );
 }
 
