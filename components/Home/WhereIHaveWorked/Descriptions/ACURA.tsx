@@ -1,51 +1,49 @@
 import React from "react";
 import ArrowIcon from "../../../Icons/ArrowIcon";
 import { getTasksTextWithHighlightedKeyword } from "./taskAndType";
-
-export default function EnsVision() {
+export default function AcuraGroup() {
   const tasks = [
     {
-      text: "Worked on the front-end development in the web3 domain using Next.js, Alchemy, Tailwind CSS, Wagmi, Web3.js, Moralis, Ethers.js",
-      keywords: ["Alchemy", "Wagmi", "Web3.js", "Moralis", "Ethers.js"],
+      text: "Led the transformation of Highgate Air's large-scale eCommerce website, overseeing a pivotal renovation aimed at delivering a highly performant customer experience and driving significant revenue growth for the business.",
+      keywords: ["NFT Marketplace v2"],
     },
     {
-      text: "Conducted testing tasks to ensure website functionality and quality. Managed a large user base on the website",
-      keywords: ["quality", "testing tasks", "user base"],
+      text: "Widely used React.js to transform Figma designs into eye-catching landing pages, and enhanced user engagement.",
+      keywords: ["VivaTech2022 event"],
     },
     {
-      text: "Implemented website design and enhanced interactivity.",
-      keywords: ["website design"],
+      text: "Architected strong RESTful APIs using Node.js, adhering strictly to REST, DRY, and KISS principles, to optimize performance.",
+      keywords: ["blockchain & Smart Contracts"],
     },
     {
-      text: "Collaborated closely with the team in regular meetings and interacted with smart contracts and gained expertise in ENS",
-      keywords: ["smart contracts", "ENS"],
+      text: "Aligning with business objectives resulted in a remarkable 10% increase in revenue and notable improvements in sales.",
+      keywords: ["blockchain & Smart Contracts"],
     },
   ];
-
   return (
     <>
       <div className="flex flex-col space-y-5 max-w-xl px-4 md:px-0">
         <div className="flex flex-col spacey-y-2">
           {/* Title */}
           <span className="text-gray-100 sm:text-lg text-sm font-Arimo tracking-wide">
-            Software Engineer <span className="text-AAsecondary">@ web3</span>
+            Full Stack Develeper <span className="text-AAsecondary">@ ACURA Group Australia Pty Ltd</span>
           </span>
           {/* Date */}
-          <span className="font-mono text-xs text-gray-500">Dec 2022 - Jun 2023</span>
+          <span className="font-mono text-xs text-gray-500">Dec 2021 - Feb 2022</span>
           <span
             className="font-mono text-xs text-AAsecondary hover:cursor-pointer"
+            // set text size on style attribute
             style={{ fontSize: "0.6rem" }}
-            // set on click to open the website
-            onClick={() => window.open("https://www.ens.vision/", "_blank")}
+            onClick={() => window.open("https://www.acuragroup.com.au", "_blank")}
           >
-            www.ens.vision
+            www.acuragroup.com.au
           </span>
         </div>
         <div className="flex flex-col space-y-4 sm:text-sm text-xs">
           {/* Tasks Description 1 */}
           {tasks.map((item, index) => {
             return (
-              <div key={index} className="flex flex-row space-x-1">
+              <div key={index} className="flex flex-row space-x-2">
                 <ArrowIcon className={" h-5 w-4 text-AAsecondary flex-none"} />
                 <span
                   className="text-gray-500 sm:text-sm text-xs"

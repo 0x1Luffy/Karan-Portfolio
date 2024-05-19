@@ -1,36 +1,34 @@
 import React from "react";
 import { motion } from "../../../node_modules/framer-motion/dist/framer-motion";
 import ArrowIcon from "../../Icons/ArrowIcon";
-import TrouveTavoie from "./Descriptions/TrouveTavoie";
-import FeverTokens from "./Descriptions/FeverTokens";
-import IdealFresh from "./Descriptions/IdealFresh";
-import AdvancedAgroManagement from "./Descriptions/AdvancedAgroManagement";
-import Fantasia from "./Descriptions/Fantasia";
-import SuperBerry from "./Descriptions/SuperBerry";
-import EnsVision from "./Descriptions/EnsVision";
+import RapidGlobal from "./Descriptions/RapidGlobal";
+import Lumient from "./Descriptions/Lumient";
+import AcuraGroup from "./Descriptions/ACURA";
+import ColakinCompany from "./Descriptions/Colakin";
+import EBottliGroup from "./Descriptions/EBottleCompany";
+import AccedeCompany from "./Descriptions/Accede";
+
 export default function WhereIHaveWorked() {
   const barRef = React.useRef<HTMLDivElement>(null);
   // ? INFORMATIONAL control the green position using px,
   // ? INFORMATIONAL the default value of barRef's class should be at the beginning translate-y-[0px]
   const GetDescription = () => {
     switch (DescriptionJob) {
-      case "ENSVision":
-        return <EnsVision />;
-      case "TrouveTavoie":
-        return <TrouveTavoie />;
-      case "FeverTokens":
-        return <FeverTokens />;
-      case "IdealFresh":
-        return <IdealFresh />;
-      case "Advanced Agro Management":
-        return <AdvancedAgroManagement />;
-      case "Fantasia":
-        return <Fantasia />;
-      case "SuperBerry":
-        return <SuperBerry />;
+      case "RapidGlobal":
+        return <RapidGlobal />;
+      case "Lumient":
+        return <Lumient />;
+      case "AcuraGroup":
+        return <AcuraGroup />;
+      case "EBottleCompany":
+        return <EBottliGroup/>;
+      case "AccedeCompany":
+        return <AccedeCompany />;
+      case "ColakinCompany":
+        return <ColakinCompany />;
     }
   };
-  const [DescriptionJob, setDescriptionJob] = React.useState("ENSVision");
+  const [DescriptionJob, setDescriptionJob] = React.useState("RapidGlobal");
   return (
     <div data-aos="fade-up" className="flex flex-col items-center justify-center py-24 space-y-12 bg-AAprimary">
       {/* // ? Title "Where I've Worked" */}
@@ -118,65 +116,56 @@ const CompaniesBar = props => {
         <div className="flex flex-row md:flex-col">
         <CompanyButton
             ButtonOrderOfcompanyNameBackgroundColorGreen={0}
-            CompanyName="ENS Vision"
+            CompanyName="Rapid Global"
             BarPosition={-12}
             BarAvobePosition={1}
-            DescriptionJob="ENSVision"
+            DescriptionJob="RapidGlobal"
             CompanyNameBackgroundColorGreen={[true,false, false, false, false, false]}
             setDescriptionJob={props.setDescriptionJob}
           />
           <CompanyButton
             ButtonOrderOfcompanyNameBackgroundColorGreen={1}
-            CompanyName="TrouveTavoie"
+            CompanyName="Lumient"
             BarPosition={32}
             BarAvobePosition={129}
-            DescriptionJob="TrouveTavoie"
+            DescriptionJob="Lumient"
             CompanyNameBackgroundColorGreen={[false,true, false, false, false, false]}
             setDescriptionJob={props.setDescriptionJob}
           />
           <CompanyButton
             ButtonOrderOfcompanyNameBackgroundColorGreen={2}
-            CompanyName="FeverTokens"
+            CompanyName="ACURA Group"
             BarPosition={76}
             BarAvobePosition={257}
-            DescriptionJob="FeverTokens"
+            DescriptionJob="AcuraGroup"
             CompanyNameBackgroundColorGreen={[false,false, true, false, false, false]}
             setDescriptionJob={props.setDescriptionJob}
           />
           <CompanyButton
             ButtonOrderOfcompanyNameBackgroundColorGreen={3}
-            CompanyName="IdealFresh"
+            CompanyName="eBottli"
             BarPosition={120}
             BarAvobePosition={385}
-            DescriptionJob="IdealFresh"
+            DescriptionJob="EBottleCompany"
             CompanyNameBackgroundColorGreen={[false, false, false, true, false, false]}
             setDescriptionJob={props.setDescriptionJob}
           />
           <CompanyButton
             ButtonOrderOfcompanyNameBackgroundColorGreen={4}
-            CompanyName="SuperBerry"
+            CompanyName="Colakin"
             BarPosition={164}
             BarAvobePosition={513}
-            DescriptionJob="SuperBerry"
+            DescriptionJob="ColakinCompany"
             CompanyNameBackgroundColorGreen={[false, false, false, false, true, false]}
             setDescriptionJob={props.setDescriptionJob}
           />
           <CompanyButton
             ButtonOrderOfcompanyNameBackgroundColorGreen={5}
-            CompanyName="AA Management"
+            CompanyName="Accede"
             BarPosition={208}
             BarAvobePosition={641}
-            DescriptionJob="Advanced Agro Management"
+            DescriptionJob="AccedeCompany"
             CompanyNameBackgroundColorGreen={[false, false, false, false, false, true]}
-            setDescriptionJob={props.setDescriptionJob}
-          />
-          <CompanyButton
-            ButtonOrderOfcompanyNameBackgroundColorGreen={6}
-            CompanyName="Fantasia SME"
-            BarPosition={252}
-            BarAvobePosition={769}
-            DescriptionJob="Fantasia"
-            CompanyNameBackgroundColorGreen={[false, false, false, false, false, false, true]}
             setDescriptionJob={props.setDescriptionJob}
           />
         </div>

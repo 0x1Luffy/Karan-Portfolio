@@ -16,6 +16,7 @@ import "aos/dist/aos.css";
 import Head from "next/head";
 import ScreenSizeDetector from "../components/CustomComponents/ScreenSizeDetector";
 import Maintenance from "../components/Home/Maintenance/Maintenance";
+
 export default function Home() {
   const [ShowElement, setShowElement] = useState(false);
   const [ShowThisCantBeReached, setShowThisCantBeReached] = useState(true);
@@ -24,6 +25,7 @@ export default function Home() {
   const context = useContext(AppContext);
   const aboutRef = useRef<HTMLDivElement>(null);
   const homeRef = useRef<HTMLDivElement>(null);
+
 
   useEffect(() => {
     // remove the interval Cookie timer setter when
@@ -55,6 +57,7 @@ export default function Home() {
   useEffect(() => {
     Aos.init({ duration: 2000, once: true });
   }, []);
+
 
   console.log("website is rendering...");
   const meta = {
@@ -92,11 +95,10 @@ export default function Home() {
           <SocialMediaArround finishedLoading={context.sharedState.finishedLoading} />
           {context.sharedState.finishedLoading ? <AboutMe ref={aboutRef} /> : <></>}
           {context.sharedState.finishedLoading ? <WhereIHaveWorked /> : <></>}
-          {context.sharedState.finishedLoading ? <MyPowers /> : <></>}
           {context.sharedState.finishedLoading ? <SomethingIveBuilt /> : <></>}
           {context.sharedState.finishedLoading ? <GetInTouch /> : <></>}
           {context.sharedState.finishedLoading ? (
-            <Footer githubUrl={"https://github.com/hktitof/my-website"} hideSocialsInDesktop={true} />
+            <Footer githubUrl={"https://github.com/Karan-21"} hideSocialsInDesktop={true} />
           ) : (
             <></>
           )}

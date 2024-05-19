@@ -2,20 +2,20 @@ import React from "react";
 import ArrowIcon from "../../../Icons/ArrowIcon";
 import { getTasksTextWithHighlightedKeyword } from "./taskAndType";
 
-export default function IdealFresh() {
+export default function EBottliGroup() {
   const tasks = [
     {
-      text: "Designed and Built a Desktop app for IdealFresh that manage billings, client circumstances using Apache POI with Microsoft Office Excel.",
+      text: "Led development of Winegrapes Australia's groundbreaking eCommerce website, a pivotal milestone in their funding strategy.",
       keywords: ["Apache POI"],
     },
     {
-      text: "Creating customized scripts for pulling, managing and refactoring files from Clouds.",
+      text: "Leveraged Angular.js and Node.js incorporated JWT Authentication to secure interactions between the frontend and backend",
       keywords: ["scripts"],
     },
     {
-      text: "Daily communications and interactions with a non-developers to solve their problems by providing technological solutions and expertise.",
+      text: "Technologies used: Angular JS, Google Maps and JWT Authentication, Bootstrap, Node, Express and Firebase. ",
       keywords: ["non-developers"],
-    },
+    }
   ];
   return (
     <>
@@ -23,10 +23,10 @@ export default function IdealFresh() {
         <div className="flex flex-col spacey-y-2">
           {/* Title */}
           <span className="text-gray-100 sm:text-lg text-sm font-Arimo tracking-wide">
-            Software Developer <span className="text-AAsecondary">@ JavaFX</span>
+            Full Stack Intern <span className="text-AAsecondary">@ eBottli</span>
           </span>
           {/* Date */}
-          <span className="font-mono text-xs text-gray-500">June - August 2021</span>
+          <span className="font-mono text-xs text-gray-500">Sep 2021 - Nov 2021</span>
         </div>
         <div className="flex flex-col space-y-4 sm:text-sm text-xs">
             {/* Tasks Description 1 */}

@@ -1,45 +1,51 @@
 import React from "react";
 import ArrowIcon from "../../../Icons/ArrowIcon";
 import { getTasksTextWithHighlightedKeyword } from "./taskAndType";
-export default function FeverTokens() {
+
+export default function RapidGlobal() {
   const tasks = [
     {
-      text: "Leading the development of the NFT Marketplace v2 for the Platform FeverTokens.",
-      keywords: ["NFT Marketplace v2"],
+      text: "Led rebuilding of three flagship products—MyRapid, Trainee Portal, and Rapid Incident Reporting—using agile methodologies.",
+      keywords: ["Alchemy", "Wagmi", "Web3.js", "Moralis", "Ethers.js"],
     },
     {
-      text: "Worked with a team of six developers to build a temporary NFT Marketplace platform for VivaTech2022 event, an ambitious startup originating from France,Paris.",
-      keywords: ["VivaTech2022 event"],
+      text: "Developed seamless user experiences with React.js and robust RESTful APIs with ASP.NET Core, ensuring scalability and reliability.",
+      keywords: ["quality", "testing tasks", "user base"],
     },
     {
-      text: "Interacted with the blockchain & Smart Contracts to build the new FeverTokens Platform.",
-      keywords: ["blockchain & Smart Contracts"],
+      text: "Implemented Jest unit testing for code reliability and conducted code reviews to foster continuous learning.",
+      keywords: ["website design"],
+    },
+    {
+      text: "Collaborated cross-functionally to drive product evolution, resulting in a 33% revenue increase. Technologies: React JS, Redux, Jest, ASP.NET Core, C#, MS SQL Server.",
+      keywords: ["smart contracts", "ENS"],
     },
   ];
+
   return (
     <>
       <div className="flex flex-col space-y-5 max-w-xl px-4 md:px-0">
         <div className="flex flex-col spacey-y-2">
           {/* Title */}
           <span className="text-gray-100 sm:text-lg text-sm font-Arimo tracking-wide">
-            Software Engineer <span className="text-AAsecondary">@ web3</span>
+            Full Stack Develeper <span className="text-AAsecondary">@ Rapid Global</span>
           </span>
           {/* Date */}
-          <span className="font-mono text-xs text-gray-500">Mars - August 2022</span>
+          <span className="font-mono text-xs text-gray-500">Jan 2023 - Present</span>
           <span
             className="font-mono text-xs text-AAsecondary hover:cursor-pointer"
-            // set text size on style attribute
             style={{ fontSize: "0.6rem" }}
-            onClick={() => window.open("https:///www.fevertokens.io", "_blank")}
+            // set on click to open the website
+            onClick={() => window.open("www.rapidglobal.com", "_blank")}
           >
-            www.fevertokens.io
+            www.rapidglobal.com
           </span>
         </div>
         <div className="flex flex-col space-y-4 sm:text-sm text-xs">
           {/* Tasks Description 1 */}
           {tasks.map((item, index) => {
             return (
-              <div key={index} className="flex flex-row space-x-2">
+              <div key={index} className="flex flex-row space-x-1">
                 <ArrowIcon className={" h-5 w-4 text-AAsecondary flex-none"} />
                 <span
                   className="text-gray-500 sm:text-sm text-xs"
