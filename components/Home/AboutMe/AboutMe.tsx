@@ -2,14 +2,21 @@ import React from "react";
 import Img from "../../../components/smallComp/image/Img";
 import ArrowIcon from "../../../components/Icons/ArrowIcon";
 
-export default function AboutMe(props) {
-  const technologies = [
+const AboutMe: React.FC = () => {
+  const technologies: string[][] = [
     ["Next.js", "JavaScript (ES6+)", "Tailwind CSS", "Ether.js", "Solidity"],
     ["Node.js", "TypeScript", "Framer Motion", "react-moralis", "web3.js"],
   ];
 
   return (
-    <div id="aboutSection" data-aos="fade-up" className="snap-start flex flex-col items-center py-20 bg-AAprimary">
+    <div id="aboutSection" data-aos="fade-up" className="snap-start flex flex-col items-center py-20 bg-AAprimary relative">
+      {/* Particle effect */}
+      <div className="particle-container">
+        {[...Array(30)].map((_, index) => (
+          <div key={index} className="particle"></div>
+        ))}
+      </div>
+
       <div className="flex flex-col space-y-8 px-4 sm:px-0 w-full sm:w-[500px] md:w-[700px] lg:w-[900px]">
         <div className="flex flex-row items-center">
           <div className="flex flex-row items-center mr-4">
@@ -52,3 +59,5 @@ export default function AboutMe(props) {
     </div>
   );
 }
+
+export default AboutMe;
